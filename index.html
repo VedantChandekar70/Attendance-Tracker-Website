@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trackify | Attendance Tracking System</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-image: url('img/attendance background.jpeg.jpg'); /* Online image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #000;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.85); /* Light overlay */
+      z-index: -1;
+    }
+
+    header {
+      background-color: #1e3a8a;
+      padding: 10px;
+      color: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    .navbar {
+      background-color: #dc2626;
+      padding: 25px 0;
+      font-size: 20px;
+    }
+
+    .navbar a {
+      color: white;
+      margin: 0 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .welcome {
+      padding: 30px 20px;
+    }
+
+    .welcome h2 {
+      color: #1e3a8a;
+    }
+
+    .welcome p {
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .get-started {
+      padding: 12px 24px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .get-started:hover {
+      background-color: #2563eb;
+    }
+
+    .records {
+      margin: 30px auto;
+      max-width: 700px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table thead {
+      background-color: #2563eb;
+      color: white;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 10px;
+    }
+
+    footer {
+      background-color: #dc2626;
+      color: white;
+      padding: 5px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .navbar {
+        font-size: 16px;
+        padding: 15px 0;
+      }
+
+      .navbar a {
+        margin: 0 10px;
+      }
+
+      .get-started {
+        width: 80%;
+        font-size: 16px;
+      }
+
+      table, th, td {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Trackify Logo">
+      <h1>Trackify | Attendance Tracking System</h1>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <a href="Templates/home.html">Home</a>
+    <a href="Templates/signup.html">Signup</a>
+    <a href="Templates/dashboard.html">Dashboard</a>
+    <a href="#">Attendance</a>
+  </nav>
+
+  <section class="welcome">
+    <h2>Welcome to the Attendance Tracking System</h2>
+    <p>
+      Our system helps organizations, schools, and businesses to efficiently track attendance. It provides real-time updates, automated reports, and easy integration with your existing tools.
+    </p>
+    <p>
+      With our platform, you can manage employee or student attendance seamlessly, ensuring accurate records and better productivity.
+    </p>
+    <button class="get-started" onclick="getStarted()">Get Started</button>
+  </section>
+
+  <section class="records">
+    <h3>Recent Attendance Records</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Sno.</th>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>2025-03-10</td>
+          <td>Present</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Smith</td>
+          <td>2025-03-10</td>
+          <td>Absent</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Mark Johnson</td>
+          <td>2025-03-10</td>
+          <td>Present</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Emily Davis</td>
+          <td>2025-03-10</td>
+          <td>Present</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Attendance Tracking System. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function getStarted() {
+      alert("Redirecting to Signup page...");
+      window.location.href = "signup.html";
+    }
+  </script>
+
+</body>
+</html>
